@@ -1,0 +1,45 @@
+
+<canvas width="600" height="400">
+
+</canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    //Definir color del pincel
+    pincel.fillStyle = "lightgray";
+    //Llenar con rectangulos
+    pincel.fillRect(0,0,600,400);
+
+    //Crear la bandera con diferentes colores
+    pincel.fillStyle = "green";
+    pincel.fillRect(0,0,200,400);
+    pincel.fillStyle = "white";
+    pincel.fillRect(200,0,200,400);
+    pincel.fillStyle = "red";
+    pincel.fillRect(400,0,200,400);
+
+    //Dibujar un triangulo
+    pincel.fillStyle = "yellow";
+    //Comenzar un camino dentro del canvas
+    pincel.beginPath();
+    //Moverse a una coordenada dentro del canvas
+    pincel.moveTo(300,200);
+    //Dibujar una linea en el canvas
+    pincel.lineTo(200,400);
+    pincel.lineTo(400,400);
+    //Rellenar trazo en canvas
+    pincel.fill();
+
+
+    //Dibujar un circulo
+    pincel.fillStyle = "blue";
+    pincel.beginPath();
+    //Draw a circle 
+    //Position 300,200
+    //Radious 50 and permiter 0
+    pincel.arc(300,200,50,0,2*Math.PI);
+    pincel.fill();
+
+
+</script>
